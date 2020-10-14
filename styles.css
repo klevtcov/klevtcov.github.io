@@ -1,0 +1,393 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body, html {
+    overflow-x: hidden;
+}
+
+nav {
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+#checkbox-menu, .toggle {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    align-self: center;
+    font-size: 13px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+}
+
+.menu li a:hover {
+    background: #ffcc01;
+    border-radius: 3px;
+}
+
+.menu li a.logo {
+    font-size: 25px;
+    margin-right: 240px;
+}
+
+.menu li a.contacts {
+    margin-right: 100px;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.intro{
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-img{
+    background-image: url(img/room.jpg);
+    width: 965px;
+    height: 640px;
+    margin-right: 15px;
+}
+
+.intro .intro-text{
+    position: absolute;
+    font-size: 62px;
+    left: 15px;
+    top: 100px;
+}
+
+.intro .intro-contacts{
+    background-color: #ffcc01;
+    max-width: 590px;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.intro-contacts i{
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.intro-contacts a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    align-self: center;
+}
+
+.intro-contacts p{
+    font-size: 18px;
+    margin-right: 40px;
+}
+
+.stats {
+    display: flex;
+    margin-top: 130px;
+}
+
+.stats-line {
+    display: flex;
+}
+
+.stats-text {
+    padding-right: 40px;
+    margin-left: 15px;
+}
+
+.stats-text h2 {
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+.stats-text p {
+    margin-top: 50px;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stats-square {
+    font-size: 40px;
+    color: #ffcc01;
+    margin-bottom: 15px;
+}
+
+.square-text {
+    font-size: 14px;
+}
+
+.apartments {
+    background: #F6F5F4;
+    padding: 60px 0;
+}
+
+.apart h2{
+    margin-bottom: 85px;
+    font-size: 40px;
+}
+
+.card {
+    width: 348px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    background: #fafaf9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.card-conteiner {
+    padding: 25px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.card-info .money {
+    font-size: 18px;
+    color: #ffcc01;
+}
+
+.card-info i {
+    margin-right: 8px;
+}
+
+.card-info span:first-child {
+    margin-right: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
+}
+
+.apart input[type=text] {
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    border: none;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-position: 27px;
+    outline: none;
+    padding-left: 62px;
+    font-size: 15px;
+    color: #919eb1;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.apart input[type=submit] {
+    width: 115px;
+    height: 70px;
+    border: none;
+    background: #ffcc01;
+    font-size: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-left: -4px;
+} 
+
+.all {
+    width: 250px;
+    height: 70px;
+    border: none;
+    background-repeat: 4px;
+    font-size: 15px;
+    margin-left: 40px;
+    margin-top: 52px;
+}
+
+.buttons-search {
+    display: flex;
+}
+
+@media screen and (max-width: 765px) {
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: black;
+        background: #ffcc01;
+        transition: all .1s linear;
+    }
+    .toggle:hover {
+        background: #d3a900;
+    }
+    #checkbox-menu:checked + label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    #checkbox-menu:checked + label .touch {
+        height: 350px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        transition: height .3s linear;
+    }
+    .menu li{
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu li a{
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu li a.logo {
+        font-size: 21px;
+        margin-right: 0;
+    }
+    
+    .menu li a.contacts {
+        margin-right: 0;
+    }
+    .intro{
+        margin-top: 0;
+        display: block;
+        min-width: 100%;
+    }
+    .intro-img{
+        background-position: bottom 0px right 320px;
+    }
+    .intro .intro-text{
+        position: relative;
+        font-size: 35px;
+        right: -10px;
+        top: 95px;
+    }
+    .intro .intro-contacts{
+        right: 0;
+        top: -60px;
+        padding: 20px 10px;
+        position: relative;
+    }
+    .intro .intro-contacts i{
+        margin-right: 10px;
+    }
+    .intro .intro-contacts p{
+        font-size: 13px;
+        margin-right: 0;
+    }
+    .intro-contacts a{
+        font-size: 13px;
+        margin-right: 0;
+        text-decoration: none;
+        color: #000;
+    }
+    .stats {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .stats-text {
+        padding: 10px 10px 10px 15px;
+        margin-left: 0;
+    }
+
+    .stats-text h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .stats-text p {
+        margin-top: 5px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .square {
+        height: 140px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 10px;
+        justify-items: center;
+    }
+
+    .apart input[type=text] {
+        margin-top: 20px;
+        width: 130px;
+    }
+    
+    .buttons-search {
+        flex-direction: column;
+        margin-left: 4%;
+    }
+
+    .all {
+        background: #fff;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .apart h2{
+        margin-bottom: 40px;
+        font-size: 30px;
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
